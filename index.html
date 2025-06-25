@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="From Ideal to Real: Unified and Data-Efficient Dense Prediction for Real-World Scenarios">
+  <meta name="keywords" content="From Ideal to Real">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Ideal to Real: Unified and Data-Efficient Dense Prediction for Real-World Scenarios</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/favicon_io/logo3.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+  <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="static/favicon_io/logo3.png" alt="Logo" style="height: 48px; margin-bottom: 16px;">
+          <h1 class="title is-1 publication-title">From Ideal to Real: Unified and Data-Efficient Dense Prediction for Real-World Scenarios</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Changliang Xia<sup>*</sup>,</span>
+            <span class="author-block">
+            <span class="author-block">
+              <a href="https://chengyou-jia.github.io/">Chengyou Jia</a><sup>*</sup>,</span>
+            <span class="author-block">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=8qX4Z5IAAAAJ">Zhuohang Dang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=C3ujEF0AAAAJ">Minnan Luo</a><sup>†</sup>,</span>
+            <span class="author-block">
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Xi'an Jiaotong University</span>
+            <br>
+            <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution.</small></span>
+            <span class="eql-cntrb"><small><sup>†</sup>Corresponding Author.</small></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href=""
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/xcll/DenseDiT_Model"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 1em;">
+                  </span>
+                  <span>Model</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/xcll/DenseWorld_Benchmark"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 1em;">
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">  
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-12">
+        <div class="video-container">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/demo_depth_1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered" style="margin-bottom: 1.5rem;"><b>Demo1: Depth Estimation in Foggy Scenes</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container is-max-desktop">
+      <div class="columns is-justify-content-center">
+        <div class="column is-6">
+          <div class="video-container">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="static\videos\demo_tree.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><b>Demo2: Automated Tree Tagging</b></p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <source src="static/videos/demo_fire.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Demo3: Instant Fire Alert</b></p>
+        </div>
+      </div>  
+      <div class="columns">  
+          <div class="column is-6">
+              <div class="video-container">  
+                <video poster="" id="tree" autoplay controls muted loop height="100%">
+                  <source src="static/videos/demo_build.mp4" type="video/mp4">
+                </video>
+                <p class="has-text-centered"><b>Demo4: High-Precision Road Network Modeling</b></p>
+              </div>  
+          </div>  
+          <div class="column is-6">  
+              <div class="video-container">  
+                <video poster="" id="tree" autoplay controls muted loop height="100%">
+                  <source src="static/videos/demo_TNBC.mp4" type="video/mp4">
+                </video>
+                <p class="has-text-centered"><b>Demo5: Nucleus Localization </b></p>
+              </div>  
+          </div>
+      </div>
+  </div>  
+  
+  <div class="section has-text-centered" style="margin-top: 2em;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 32px;">
+      <img src="static/images/more.png" alt="Logo" style="height: 24px;">
+      <h2 class="title is-3 has-text-centered" style="margin: 0;">More Demos and Comparison</h2>
+    </div>
+    <div class="buttons is-centered" id="demo-buttons">
+      <button class="button is-info is-active" onclick="showDemoImage('adverse', 0)">Adverse Environment Perception</button>
+      <button class="button is-info" onclick="showDemoImage('city', 1)">Smart City Inspection</button>
+      <button class="button is-info" onclick="showDemoImage('medical', 2)">Intelligent Medical Assistance</button>
+      <button class="button is-info" onclick="showDemoImage('eco', 3)">Ecological Monitoring</button>
+      <button class="button is-info" onclick="showDemoImage('safety', 4)">Safety Production Control</button>
+    </div>
+    <div id="demo-image-container" style="margin-top: 1.5em;">
+    </div>
+  </div>
+
+  <style>
+    #demo-buttons .button.is-active {
+      background-color: #23527c !important;
+      color: #fff !important;
+      box-shadow: 0 4px 16px rgba(35,82,124,0.25), 0 1.5px 4px rgba(0,0,0,0.15);
+      border: 2px solid #16324a;
+      transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+    }
+  </style>
+
+  <script>
+  const demoData = [
+    {type: 'adverse', img: 'static/images/crop_demo_1(1)_page-0001.jpg', alt: 'Adverse Environment Perception'},
+    {type: 'city', img: 'static/images/crop_demo_2(1)_page-0001.jpg', alt: 'Smart City Inspection'},
+    {type: 'medical', img: 'static/images/crop_demo_3(1)_page-0001.jpg', alt: 'Intelligent Medical Assistance'},
+    {type: 'eco', img: 'static/images/crop_demo_4(1)_page-0001.jpg', alt: 'Ecological Monitoring'},
+    {type: 'safety', img: 'static/images/crop_demo_5(1)_page-0001.jpg', alt: 'Safety Production Control'}
+  ];
+
+  window.addEventListener('DOMContentLoaded', function() {
+    showDemoImage('adverse', 0);
+  });
+
+  function showDemoImage(type, idx) {
+    const btns = document.querySelectorAll('#demo-buttons .button');
+    btns.forEach((btn, i) => {
+      if(i === idx) btn.classList.add('is-active');
+      else btn.classList.remove('is-active');
+    });
+
+    const demo = demoData.find(d => d.type === type);
+    document.getElementById('demo-image-container').innerHTML =
+      `<img src="${demo.img}" alt="${demo.alt}" style="max-width: 60%; height: auto; margin-top: 1em;">`;
+  }
+  </script>
+</section>  
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 32px;">
+          <img src="static/images/abstract.png" alt="Logo" style="height: 28px;">
+          <h2 class="title is-3">Abstract</h2>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Dense prediction tasks hold significant importance of computer vision,  aiming to learn pixel-wise annotated label for an input image. Despite advances in this field, existing methods primarily focus on idealized conditions, with limited generalization to real-world scenarios and facing the challenging scarcity of real-world data. We aim to expand dense prediction to a broader range of practical real-world scenarios while reducing the reliance on large-scale data under limited supervision. To systematically study this problem, we first introduce <strong>DenseWorld</strong>, a benchmark spanning a broad set of 25 dense prediction tasks that correspond to urgent real-world applications, featuring unified evaluation across tasks. Then, we propose <strong>DenseDiT</strong>, which maximally exploits generative models'  visual priors to perform diverse real-world dense prediction tasks through a unified strategy. DenseDiT combines a parameter-reuse mechanism and two lightweight branches that adaptively integrate multi-scale context, working with less than 0.1% additional parameters. Evaluations on DenseWorld reveal significant performance drops in existing general and specialized baselines, highlighting their limited real-world generalization. In contrast, DenseDiT achieves superior results using less than 0.01% training data of baselines, underscoring its practical value for real-world deployment. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 32px;">
+          <img src="static/images/11111.png" alt="Logo" style="height: 28px;">
+          <h2 class="title is-3 has-text-centered">DenseWorld Benchmark</h2>
+        </div>
+        <div class="content has-text-justified">
+          <img src="static/images/crop_denseworld_benchmark12_page-0001.jpg" width="90%" alt="" class="responsive-image" style="display: block; margin-left: auto; margin-right: auto;">
+          <md-block><strong>Overview of the DenseWorld benchmark.</strong> Upper left: the construction pipeline. Center left: examples of representative tasks across five real-world categories. Lower left: unified evaluation. Right: full taxonomy of 25 dense prediction tasks, each aligned with a practical application scenario.</md-block>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+          <div class="container  is-max-desktop">
+              <div class="columns is-centered has-text-centered">
+                  <div class="column is-full">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 32px;">
+                      <img src="static/favicon_io/logo3.png" alt="Logo" style="height: 26px;">
+                      <h2 class="title is-3">DenseDiT Architecture</h2>
+                    </div>
+                      <div class="item">
+                          <img src="static/images/crop_DenseDiT15_page-0001.jpg" width="90%" alt="ap-clip" />
+                          <h2 class="subtitle has-text-left" style="font-size: 16px;">
+                          <strong>Overview of the DenseDiT architecture.</strong> DenseDiT is a generative-based dense prediction framework tailored for diverse real-world scenarios. It operates via a parameter-reuse mechanism, preserving the visual priors of the pretrained DiT backbone. To enhance task adaptability, DenseDiT introduces two lightweight branches—the prompt branch and the demonstration branch—providing semantic and visual contextual cues under the control of a Distribution Alignment Indicator (DAI). This design ensures both data-efficiency and strong generalization without modifying the core generative architecture.
+                          </h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+<p>
+  <i class="fas fa-exclamation-circle" style="color: #ffcc00; margin-right: 6px;"></i>
+  Thanks to <a href="https://huggingface.co/black-forest-labs/FLUX.1-dev" target="_blank">FLUX.1-dev</a> for their powerful model,
+  <a href="https://github.com/ali-vilab/In-Context-LoRA" target="_blank">IC-LoRA</a> for discovering the in-context capability of FLUX, and
+  <a href="https://github.com/Yuanshi9815/OminiControl" target="_blank">OminiControl</a> for their wonderful open-sourced work.
+</p>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <!-- <pre><code>@article{jia2024agentstore,
+      title={AgentStore: Scalable Integration of Heterogeneous Agents As Specialized Generalist Computer Assistant},
+      author={Jia, Chengyou and Luo, Minnan and Dang, Zhuohang and Sun, Qiushi and Xu, Fangzhi and Hu, Junlin and Xie, Tianbao and Wu, Zhiyong},
+      journal={arXiv preprint arXiv:2410.18603},
+      year={2024}
+    }</code></pre> -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
